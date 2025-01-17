@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Reels from "@/components/Reels";
 
 export default function Home() {

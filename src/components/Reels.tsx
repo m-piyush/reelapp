@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { FaHeart } from "react-icons/fa";
 import { CiHeart } from "react-icons/ci";
 import { IoIosCloseCircleOutline } from "react-icons/io";
-import { CiShare2 } from "react-icons/ci";
+
 import Share from "@/components/Share"
 const Reels = () => {
     const videoRefs = useRef<HTMLVideoElement[]>([]);
@@ -73,12 +73,6 @@ const Reels = () => {
         }
     };
 
-    const toggleMute = (video: HTMLVideoElement) => {
-        video.muted = !video.muted;
-        if (!video.muted) {
-            video.play();
-        }
-    };
 
     const handleLike = (index: number) => {
         setLikes((prev) => {

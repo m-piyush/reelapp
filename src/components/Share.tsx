@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Button, Modal } from 'antd';
+import {  Modal } from 'antd';
 import { FaWhatsapp, FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 import { CiShare2 } from "react-icons/ci";
-import Image from 'next/image';
+
 
 const Share: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
