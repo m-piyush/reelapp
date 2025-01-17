@@ -1,36 +1,102 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Reels Application
 
-## Getting Started
+This project is a vertical scrolling video reels application built using React, TypeScript, and Tailwind CSS. It supports features such as autoplay for videos in view, pausing videos that move out of view, and displaying videos in a modal with vertical scrolling and controlled playback.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. **Intersection Observer Integration**:
+   - Automatically plays videos when they are visible on the screen.
+   - Pauses videos when they scroll out of view.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+2. **Modal Functionality**:
+   - Displays the selected video in a modal.
+   - Supports vertical scrolling within the modal to navigate through other videos.
+   - Only the video in view plays while others are paused.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. **Like and Share Options**:
+   - Users can like/unlike videos with a toggle.
+   - Includes a placeholder share button.
 
-## Learn More
+4. **Background Scroll Control**:
+   - Disables background scrolling when the modal is open.
 
-To learn more about Next.js, take a look at the following resources:
+5. **Responsive Design**:
+   - Fully responsive layout for mobile, tablet, and desktop devices.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Process and Design Choices
 
-## Deploy on Vercel
+1. **Framework and Libraries**:
+   - **React**: For building the UI components.
+   - **TypeScript**: For type safety and better developer experience.
+   - **Tailwind CSS**: For fast and efficient styling.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. **Video Playback Logic**:
+   - Used the `IntersectionObserver` API to detect when a video enters or exits the viewport.
+   - This ensures only one video plays at a time, optimizing performance and user experience.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+3. **Modal Implementation**:
+   - Designed a modal with vertical scrolling to allow users to browse through videos seamlessly.
+   - Added logic to pause videos when they move out of view in the modal.
+
+4. **User Interaction**:
+   - Like/unlike functionality is implemented using React state.
+   - Share button is added as a placeholder for future enhancements.
+
+5. **Responsiveness**:
+   - Ensured the layout adapts to various screen sizes for a consistent user experience.
+
+---
+
+## Instructions to Set Up the Project
+
+### Prerequisites
+- Node.js (v16 or later)
+- npm or yarn
+
+### Steps
+
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/m-piyush/reelapp.git
+   cd reels-application
+   ```
+
+2. **Install Dependencies**:
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. **Start the Development Server**:
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+   The application will be available at `http://localhost:3000`.
+
+4. **Build for Production**:
+   ```bash
+   npm run build
+   # or
+   yarn build
+   ```
+
+5. **Run the Production Build**:
+   ```bash
+   npm start
+   # or
+   yarn start
+   ```
+
+## Future Enhancements
+- Add backend support for persisting likes and video data.
+- Implement share functionality.
+- Optimize video loading with lazy loading and streaming support.
+- Enhance accessibility with better keyboard and screen reader support.
+
